@@ -407,18 +407,28 @@
             <div class="ft-product-mesurment-content position-relative">
                 <span class="ft-pm-bg-img position-absolute"><img src="assets/img/bg/pm-bg.png" alt=""></span>
                 <body>
-   <div class="jumbotron">
-    <header>
-      <h1>Skylace Logistics</h1>
-      <p>Track your shipment easily</p>
-      <div class="input-wrapper">
-        <input id="trackingId" type="text" placeholder="Enter Tracking ID" autocomplete="off"/>
-        <button onclick="redirectToTracking()">Track</button>
-      </div>
-    </header>
-  </div>
-
-  <script>
+				
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+									<div class="ft-product-mesurment-form-input">
+										
+											<div class="ft-product-mesurment-form-input-area">
+												<label class="ft-pm-title">Personal  Data</label>
+												<div class="row">
+												
+													<div class="col-lg-6">
+														<div class="ft-pm-input">
+														    
+															 <input id="trackingId" type="text" placeholder="Enter Tracking ID" autocomplete="off"/>
+														</div>
+													</div>
+												</div>
+											</div>
+											 <button onclick="redirectToTracking()">Track & Trace</button>
+										
+									</div>
+								</div>
+                <script>
     function redirectToTracking() {
       const trackingId = document.getElementById("trackingId").value.trim().toUpperCase();
       if (!trackingId) {
@@ -427,7 +437,7 @@
       }
       window.location.href = `tracking.html?id=${trackingId}`;
     }
-  </script>
+  </script>                
 </body>
             </div>
         </div>
@@ -617,5 +627,4 @@ window.smartsupp||(function(d) {
 <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 
 </body>
-
 </html>
